@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export function Hero() {
     return (
-        <section className="flex h-dvh w-full flex-col bg-white text-black">
-            <div className="relative flex h-1/2 w-full items-end px-10 pb-12 mobile:px-5">
+        <section className="flex w-full flex-col bg-white text-black">
+            <div className="relative flex h-[50dvh] w-full items-end px-10 pb-12 mobile:px-5">
                 <h1 className="w-full leading-[0.85] tracking-tight uppercase text-[clamp(1.5rem,10vw,9rem)]">
                     Lucía
                     <br />
@@ -16,7 +16,7 @@ export function Hero() {
                 </div>
             </div>
 
-            <div className="relative h-1/2 w-full overflow-hidden">
+            <div className="relative h-dvh w-full overflow-hidden">
                 <Image
                     src="/images/hero/Hero-imgB.png"
                     alt="Lucía Vázquez Leal"

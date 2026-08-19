@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "motion/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
     CURTAIN_DURATION,
     CURTAIN_EASE,
@@ -11,8 +11,28 @@ import {
 } from "./constants";
 import { MenuLink } from "./MenuLink/MenuLink";
 
+function useIsMobile() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(max-width: 767px)");
+        setIsMobile(mediaQuery.matches);
+
+        function handleChange(event: MediaQueryListEvent) {
+            setIsMobile(event.matches);
+        }
+
+        mediaQuery.addEventListener("change", handleChange);
+        return () => mediaQuery.removeEventListener("change", handleChange);
+    }, []);
+
+    return isMobile;
+}
+
 export function Menu() {
     const [isOpen, setIsOpen] = useState(false);
+    const isMobile = useIsMobile();
+    const iconOffset = isMobile ? 4.5 : 6.5;
 
     function toggleMenu() {
         setIsOpen((prev) => !prev);
@@ -25,18 +45,26 @@ export function Menu() {
                 onClick={toggleMenu}
                 aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
                 aria-expanded={isOpen}
-                className="fixed top-6 right-6 z-[70] mix-blend-difference h-4 w-8 cursor-pointer"
+                className="fixed top-6 right-6 z-[70] mix-blend-difference h-4 w-8 cursor-pointer mobile:h-3 mobile:w-6"
             >
                 <motion.span
-                    className="absolute top-0 left-0 h-[3px] w-8 rounded-full bg-white"
+                    className="absolute top-0 left-0 h-[3px] w-8 rounded-full bg-white mobile:w-6"
                     initial={false}
-                    animate={isOpen ? { y: 6.5, rotate: 45 } : { y: 0, rotate: 0 }}
+                    animate={
+                        isOpen
+                            ? { y: iconOffset, rotate: 45 }
+                            : { y: 0, rotate: 0 }
+                    }
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                 />
                 <motion.span
-                    className="absolute top-[13px] left-0 h-[3px] w-8 rounded-full bg-white"
+                    className="absolute top-[13px] left-0 h-[3px] w-8 rounded-full bg-white mobile:top-[9px] mobile:w-6"
                     initial={false}
-                    animate={isOpen ? { y: -6.5, rotate: -45 } : { y: 0, rotate: 0 }}
+                    animate={
+                        isOpen
+                            ? { y: -iconOffset, rotate: -45 }
+                            : { y: 0, rotate: 0 }
+                    }
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                 />
             </button>
