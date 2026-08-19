@@ -17,12 +17,13 @@ const MAX_HEIGHT_REM = 20;
 export function PortfolioCardMobile({ project }: PortfolioCardMobileProps) {
     const ref = useRef<HTMLAnchorElement>(null);
     const [isHovered, setIsHovered] = useState(false);
-    const [frontIndex, setFrontIndex] = useState(0);
+    const [imageIndex, setImageIndex] = useState(0);
 
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ["start end", "end start"],
     });
+
     const backHeightRem = useTransform(
         scrollYProgress,
         [0, 0.5, 1],
@@ -30,11 +31,21 @@ export function PortfolioCardMobile({ project }: PortfolioCardMobileProps) {
     );
     const backHeight = useTransform(backHeightRem, (value) => `${value}rem`);
 
+    const grayscaleAmount = useTransform(
+        scrollYProgress,
+        [0, 0.5, 1],
+        [1, 0, 1],
+    );
+    const filter = useTransform(
+        grayscaleAmount,
+        (value) => `grayscale(${value})`,
+    );
+
     useEffect(() => {
         if (!isHovered || project.images.length < 2) return;
 
         const interval = setInterval(() => {
-            setFrontIndex((prev) => (prev + 1) % project.images.length);
+            setImageIndex((prev) => (prev + 1) % project.images.length);
         }, HOVER_INTERVAL_MS);
 
         return () => clearInterval(interval);
@@ -42,7 +53,7 @@ export function PortfolioCardMobile({ project }: PortfolioCardMobileProps) {
 
     function handleMouseLeave() {
         setIsHovered(false);
-        setFrontIndex(0);
+        setImageIndex(0);
     }
 
     return (
@@ -55,25 +66,15 @@ export function PortfolioCardMobile({ project }: PortfolioCardMobileProps) {
         >
             <motion.div
                 className="relative w-full overflow-hidden"
-                style={{ height: backHeight }}
+                style={{ height: backHeight, filter }}
             >
                 <Image
-                    src={project.images[0]}
-                    alt=""
+                    src={project.images[imageIndex]}
+                    alt={project.title}
                     fill
                     sizes="100vw"
-                    className="object-cover grayscale"
+                    className="object-cover"
                 />
-
-                <div className="absolute top-0 bottom-0 left-6 right-6 m-auto aspect-[4/3] overflow-hidden shadow-xl">
-                    <Image
-                        src={project.images[frontIndex]}
-                        alt={project.title}
-                        fill
-                        sizes="100vw"
-                        className="object-cover"
-                    />
-                </div>
             </motion.div>
 
             <div className="flex flex-col gap-4 pr-5">
