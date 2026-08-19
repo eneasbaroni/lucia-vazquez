@@ -25,30 +25,18 @@ export function Menu() {
                 onClick={toggleMenu}
                 aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
                 aria-expanded={isOpen}
-                className="fixed top-6 right-6 z-[70] h-4 w-8 cursor-pointer"
+                className="fixed top-6 right-6 z-[70] mix-blend-difference h-4 w-8 cursor-pointer"
             >
                 <motion.span
-                    className="absolute top-0 left-0 h-[3px] w-8 rounded-full"
+                    className="absolute top-0 left-0 h-[3px] w-8 rounded-full bg-white"
                     initial={false}
-                    animate={
-                        isOpen
-                            ? { y: 6.5, rotate: 45, backgroundColor: "#ffffff" }
-                            : { y: 0, rotate: 0, backgroundColor: "#000000" }
-                    }
+                    animate={isOpen ? { y: 6.5, rotate: 45 } : { y: 0, rotate: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                 />
                 <motion.span
-                    className="absolute top-[13px] left-0 h-[3px] w-8 rounded-full"
+                    className="absolute top-[13px] left-0 h-[3px] w-8 rounded-full bg-white"
                     initial={false}
-                    animate={
-                        isOpen
-                            ? {
-                                  y: -6.5,
-                                  rotate: -45,
-                                  backgroundColor: "#ffffff",
-                              }
-                            : { y: 0, rotate: 0, backgroundColor: "#000000" }
-                    }
+                    animate={isOpen ? { y: -6.5, rotate: -45 } : { y: 0, rotate: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                 />
             </button>
