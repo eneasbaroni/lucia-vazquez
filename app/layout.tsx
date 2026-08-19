@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Archivo } from "next/font/google";
-import { Menu } from "@/components";
+import { Footer, Menu } from "@/components";
 import "./globals.css";
 
 const inter = Inter({
@@ -28,7 +28,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
             <body className="min-h-full flex flex-col">
                 <Menu />
-                {children}
+                <div className="relative z-10">{children}</div>
+                <Footer />
             </body>
         </html>
     );
