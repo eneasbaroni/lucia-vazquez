@@ -1,7 +1,8 @@
 "use client";
 
+import { useIsMobile } from "@/lib/useIsMobile";
 import { AnimatePresence, motion } from "motion/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
     CURTAIN_DURATION,
     CURTAIN_EASE,
@@ -10,24 +11,6 @@ import {
     STRIPES_DELAY,
 } from "./constants";
 import { MenuLink } from "./MenuLink/MenuLink";
-
-function useIsMobile() {
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const mediaQuery = window.matchMedia("(max-width: 767px)");
-        setIsMobile(mediaQuery.matches);
-
-        function handleChange(event: MediaQueryListEvent) {
-            setIsMobile(event.matches);
-        }
-
-        mediaQuery.addEventListener("change", handleChange);
-        return () => mediaQuery.removeEventListener("change", handleChange);
-    }, []);
-
-    return isMobile;
-}
 
 export function Menu() {
     const [isOpen, setIsOpen] = useState(false);

@@ -6,3 +6,13 @@ export type Service = {
     images: string[];
     relatedProjects: string[];
 };
+
+export type PortfolioItem = {
+    slug: string;
+    title: string;
+    category: string;
+    client: string;
+    shortDescription: string;
+    fullDescription: string;
+    images: string[];
+};

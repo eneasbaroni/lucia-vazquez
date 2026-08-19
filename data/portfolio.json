@@ -1,0 +1,83 @@
+[
+    {
+        "slug": "qlokura-tecnopolis",
+        "title": "Q'Lokura — Tecnópolis",
+        "category": "diseno-grafico",
+        "client": "Q'Lokura",
+        "shortDescription": "Concepto, diseño y desarrollo visual y creativo para el show en Tecnópolis.",
+        "fullDescription": "Concepto, diseño y desarrollo visual y creativo para Q'Lokura en Tecnópolis: piezas gráficas, pantallas de show y guion del anuncio del evento.",
+        "images": ["/images/services/service_01.jpg"]
+    },
+    {
+        "slug": "caballeros-de-la-quema-movistar-arena",
+        "title": "Caballeros de la Quema — Movistar Arena",
+        "category": "direccion-creativa",
+        "client": "Caballeros de la Quema",
+        "shortDescription": "Guion y dirección creativa para el primer show de la banda en Movistar Arena.",
+        "fullDescription": "Guion y dirección creativa para el primer show de Caballeros de la Quema en Movistar Arena, acompañando la puesta en escena y la coordinación del evento.",
+        "images": ["/images/services/service_01.jpg"]
+    },
+    {
+        "slug": "g-sony",
+        "title": "G-Sony",
+        "category": "direccion-creativa",
+        "client": "G-Sony",
+        "shortDescription": "Estilismo y asistencia creativa en set de filmación.",
+        "fullDescription": "Estilismo y asistencia creativa para G-Sony durante set de filmación, 2025.",
+        "images": ["/images/services/service_01.jpg"]
+    },
+    {
+        "slug": "soui-uno-nos-cruzas-en-el-pogo",
+        "title": "Soui Uno — Nos Cruzas en el Pogo",
+        "category": "diseno-grafico",
+        "client": "Soui Uno",
+        "shortDescription": "Desarrollo integral de visuales e identidad visual para el álbum, con un universo de personajes propio para cada canción.",
+        "fullDescription": "Desarrollo integral de visuales e identidad visual para el álbum 'Nos Cruzas en el Pogo' de Soui Uno, creando el universo visual y el diseño de personajes de cada canción, acompañando la construcción estética y narrativa del proyecto artístico.",
+        "images": ["/images/services/service_01.jpg"]
+    },
+    {
+        "slug": "seru-giran-gira-2026",
+        "title": "Serú Girán — Gira 2026",
+        "category": "produccion-audiovisual",
+        "client": "Serú Girán",
+        "shortDescription": "Edición audiovisual y campañas de marketing para la gira 2026, con presentación en Movistar Arena.",
+        "fullDescription": "Edición audiovisual y campañas de marketing para la gira 2026 de Serú Girán, incluyendo su presentación en el Movistar Arena y gira nacional.",
+        "images": ["/images/services/service_01.jpg"]
+    },
+    {
+        "slug": "qlokura-en-movimiento-tour",
+        "title": "Q'Lokura — En Movimiento Tour",
+        "category": "produccion-audiovisual",
+        "client": "Q'Lokura",
+        "shortDescription": "Desarrollo y campaña creativa para la gira En Movimiento Tour, Movistar Arena (marzo 2026).",
+        "fullDescription": "Desarrollo y campaña creativa para 'En Movimiento Tour' de Q'Lokura, con presentación en Movistar Arena en marzo de 2026.",
+        "images": ["/images/services/service_01.jpg"]
+    },
+    {
+        "slug": "david-lebon-esencia-lebon",
+        "title": "David Lebón — Esencia Lebón",
+        "category": "produccion-audiovisual",
+        "client": "David Lebón",
+        "shortDescription": "Campaña creativa para la presentación en La Trastienda (febrero 2026).",
+        "fullDescription": "Campaña creativa para 'Esencia Lebón' de David Lebón, presentado en La Trastienda en febrero de 2026.",
+        "images": ["/images/services/service_01.jpg"]
+    },
+    {
+        "slug": "produccion-integral-eventos-masivos",
+        "title": "Producción integral de eventos masivos",
+        "category": "produccion-eventos",
+        "client": "Movistar Arena, Teatro Gran Rex, Tecnópolis",
+        "shortDescription": "Coordinación operativa, logística y producción integral junto a Soui Uno, Rip Dillom, Myke Towers, Q'Lokura, Los Herrera, Coti, Valentino Merlo, Patricia Sosa y Palito Ortega.",
+        "fullDescription": "Producción integral de eventos y shows en espacios como Movistar Arena, Teatro Gran Rex, Plaza de la Música (Córdoba), Tecnópolis y Microestadio Tecnópolis, trabajando junto a artistas como Soui Uno, Rip Dillom, Myke Towers, Q'Lokura, Los Herrera, Coti, Valentino Merlo, Patricia Sosa y Palito Ortega.",
+        "images": ["/images/services/service_01.jpg"]
+    },
+    {
+        "slug": "coordinacion-asistencia-artistas",
+        "title": "Coordinación y asistencia integral para artistas",
+        "category": "coordinacion-artistas",
+        "client": "La Mona Jiménez, Pimpinela, ACTC",
+        "shortDescription": "Logística, hospitality y acompañamiento integral junto a La Mona Jiménez, Pimpinela y el proyecto ACTC.",
+        "fullDescription": "Coordinación y acompañamiento integral de artistas y proyectos: logística, asistencia operativa, hospitality y organización de espacios, junto a artistas como La Mona Jiménez, Pimpinela y el proyecto ACTC, con cobertura en medios como Urbana Play, Vorterix y Un Poco de Ruido.",
+        "images": ["/images/services/service_01.jpg"]
+    }
+]
