@@ -49,7 +49,7 @@ export function ServiceCard({
                     </h2>
 
                     <p
-                        className={`max-w-md border-t pt-4 text-base font-light mobile:pt-2 mobile:text-sm ${
+                        className={`max-w-md border-t pt-4 text-sm font-light mobile:pt-2 mobile:text-xs ${
                             isDark
                                 ? "border-white/20 text-white/70"
                                 : "border-black/20 text-black/60"
@@ -61,7 +61,7 @@ export function ServiceCard({
 
                 <div className="relative h-full w-[42%] shrink-0 mobile:order-1 mobile:h-44 mobile:w-full">
                     <motion.div
-                        className="absolute inset-0 overflow-hidden rounded-2xl"
+                        className="absolute inset-0 overflow-hidden"
                         style={{ scale: windowScale }}
                     >
                         <motion.div
