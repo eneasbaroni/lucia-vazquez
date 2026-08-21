@@ -100,13 +100,14 @@ export function Menu() {
                             }}
                         />
 
-                        <nav className="flex h-dvh w-full flex-col items-center font-stretch-expanded justify-center gap-4 px-10 mobile:px-5">
+                        <nav className="flex h-dvh w-full flex-col items-center justify-center gap-4 px-10 font-stretch-90% mobile:items-start mobile:px-5">
                             {LINKS.map((link, index) => (
                                 <MenuLink
                                     key={link.href}
                                     href={link.href}
                                     label={link.label}
                                     index={index}
+                                    accentIndices={link.accentIndices}
                                     onClick={() => setIsOpen(false)}
                                 />
                             ))}

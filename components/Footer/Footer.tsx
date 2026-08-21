@@ -10,9 +10,20 @@ export function Footer() {
                 </p>
 
                 <h2 className="font-archivo text-right text-[clamp(3rem,10vw,9rem)] leading-[0.85] tracking-tight uppercase mobile:text-left">
-                    Lucía
+                    Lucí
+                    <span className="font-lacquer lowercase text-[1.167em] leading-[0.85]">
+                        a
+                    </span>
                     <br />
-                    Vázquez Leal
+                    Váz
+                    <span className="font-lacquer lowercase text-[1.167em] leading-[0.1]">
+                        q
+                    </span>
+                    uez L
+                    <span className="font-lacquer lowercase text-[1.167em] leading-[0.1]">
+                        e
+                    </span>
+                    al
                 </h2>
             </div>
 

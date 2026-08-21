@@ -1,18 +1,12 @@
 import type { Metadata } from "next";
 import {
-    Inter,
     Archivo,
     Instrument_Serif,
-    Imbue,
     Google_Sans,
+    Lacquer,
 } from "next/font/google";
 import { Footer, Logo, Menu, PageTransition, SmoothScroll } from "@/components";
 import "./globals.css";
-
-const inter = Inter({
-    subsets: ["latin"],
-    variable: "--font-inter",
-});
 
 const archivo = Archivo({
     subsets: ["latin"],
@@ -26,15 +20,15 @@ const instrumentSerif = Instrument_Serif({
     weight: ["400"],
 });
 
-const imbue = Imbue({
-    subsets: ["latin"],
-    variable: "--font-imbue",
-    weight: ["400"],
-});
-
 const googleSans = Google_Sans({
     subsets: ["latin"],
     variable: "--font-google-sans",
+    weight: ["400"],
+});
+
+const lacquer = Lacquer({
+    subsets: ["latin"],
+    variable: "--font-lacquer",
     weight: ["400"],
 });
 
@@ -49,7 +43,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <html
             lang="es"
             data-scroll-behavior="smooth"
-            className={`${inter.variable} ${archivo.variable} ${instrumentSerif.variable} ${imbue.variable} ${googleSans.variable} h-full antialiased`}
+            className={`${archivo.variable} ${instrumentSerif.variable} ${googleSans.variable} ${lacquer.variable} h-full antialiased`}
         >
             <body className="min-h-full flex flex-col">
                 <SmoothScroll />

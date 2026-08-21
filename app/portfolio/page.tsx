@@ -16,7 +16,19 @@ export default async function Portfolio({ searchParams }: PortfolioProps) {
     return (
         <main className="flex flex-1 flex-col bg-white">
             <PageHero
-                title="Portfolio"
+                title={
+                    <>
+                        P
+                        <span className="font-lacquer lowercase text-[3.5rem] leading-[0.1]">
+                            o
+                        </span>
+                        rtf
+                        <span className="font-lacquer lowercase text-[3.5rem] leading-[0.1]">
+                            o
+                        </span>
+                        lio
+                    </>
+                }
                 description="Dirección creativa, producción audiovisual y producción integral de eventos, junto a artistas y proyectos como Q'Lokura, Serú Girán, Soui Uno y Caballeros de la Quema."
             />
 
