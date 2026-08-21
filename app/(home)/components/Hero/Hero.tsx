@@ -1,4 +1,5 @@
-import { GrainOverlay, HalftoneImage } from "@/components";
+import { GrainOverlay } from "@/components";
+import Image from "next/image";
 
 export function Hero() {
     return (
@@ -31,14 +32,13 @@ export function Hero() {
             </div>
 
             <div className="relative h-dvh w-full overflow-hidden">
-                <HalftoneImage
+                <Image
                     src="/images/hero/Hero-imgB.png"
                     alt="Lucía Vázquez Leal"
+                    fill
                     priority
                     sizes="100vw"
-                    className="absolute inset-0"
-                    imageClassName="object-top"
-                    align="top"
+                    className="absolute inset-0 object-cover object-top"
                 />
 
                 <GrainOverlay />
