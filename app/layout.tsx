@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Archivo, Instrument_Serif, Imbue } from "next/font/google";
-import { Footer, Logo, Menu, SmoothScroll } from "@/components";
+import {
+    Inter,
+    Archivo,
+    Instrument_Serif,
+    Imbue,
+    Google_Sans,
+} from "next/font/google";
+import { Footer, Logo, Menu, PageTransition, SmoothScroll } from "@/components";
 import "./globals.css";
 
 const inter = Inter({
@@ -26,6 +32,12 @@ const imbue = Imbue({
     weight: ["400"],
 });
 
+const googleSans = Google_Sans({
+    subsets: ["latin"],
+    variable: "--font-google-sans",
+    weight: ["400"],
+});
+
 export const metadata: Metadata = {
     title: "Lucía Vázquez Leal",
     description:
@@ -36,13 +48,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     return (
         <html
             lang="es"
-            className={`${inter.variable} ${archivo.variable} ${instrumentSerif.variable} ${imbue.variable} h-full antialiased`}
+            data-scroll-behavior="smooth"
+            className={`${inter.variable} ${archivo.variable} ${instrumentSerif.variable} ${imbue.variable} ${googleSans.variable} h-full antialiased`}
         >
             <body className="min-h-full flex flex-col">
                 <SmoothScroll />
                 <Logo />
                 <Menu />
-                <div className="relative z-10">{children}</div>
+                <PageTransition />
+                {children}
                 <Footer />
             </body>
         </html>

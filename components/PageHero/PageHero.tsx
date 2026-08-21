@@ -5,16 +5,28 @@ type PageHeroProps = {
 
 export function PageHero({ title, description }: PageHeroProps) {
     return (
-        <section className="w-full bg-white text-black">
-            <div className="flex w-full flex-col gap-4 px-10 pt-[28vh] pb-16 mobile:px-5 mobile:pt-40">
-                <h1 className="font-archivo leading-[0.9] tracking-tight uppercase text-[clamp(2.5rem,8vw,7rem)]">
-                    {title}
-                </h1>
+        <section className="relative flex h-[70vh] w-full items-end justify-between gap-10 bg-white px-10 pb-12 text-black mobile:flex-col mobile:items-start mobile:gap-6 mobile:px-5">
+            <div
+                className="pointer-events-none absolute top-1/2 left-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/4"
+                style={{
+                    WebkitMaskImage: "url('/images/logo.svg')",
+                    maskImage: "url('/images/logo.svg')",
+                    WebkitMaskRepeat: "no-repeat",
+                    maskRepeat: "no-repeat",
+                    WebkitMaskPosition: "center",
+                    maskPosition: "center",
+                    WebkitMaskSize: "contain",
+                    maskSize: "contain",
+                }}
+            />
 
-                <p className="max-w-md text-base font-light text-black/60">
-                    {description}
-                </p>
-            </div>
+            <h1 className="leading-[0.85] tracking-tight uppercase text-5xl">
+                {title}
+            </h1>
+
+            <p className="max-w-md leading-none text-right text-sm font-light text-black/60 mobile:text-left">
+                {description}
+            </p>
         </section>
     );
 }
