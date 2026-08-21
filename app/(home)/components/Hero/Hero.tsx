@@ -4,7 +4,7 @@ import Image from "next/image";
 export function Hero() {
     return (
         <section className="flex w-full flex-col bg-white text-black">
-            <div className="relative flex h-[70vh] w-full items-end justify-between gap-10 px-10 pb-12 mobile:flex-col mobile:items-start mobile:gap-6 mobile:px-5">
+            <div className="relative flex h-[70vh] w-full items-end justify-between gap-10 px-10 pb-12 mobile:flex-col mobile:items-start mobile:justify-end mobile:gap-6 mobile:px-5">
                 <div
                     className="pointer-events-none absolute top-1/2 left-1/2 h-full w-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/[0.04]"
                     style={{

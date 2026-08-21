@@ -1,5 +1,6 @@
 "use client";
 
+import { GrainOverlay } from "@/components/GrainOverlay/GrainOverlay";
 import { LINKS, CURTAIN_EASE } from "@/components/Menu/constants";
 import { pageTransitionState } from "@/lib/pageTransitionState";
 import { AnimatePresence, motion } from "motion/react";
@@ -80,6 +81,8 @@ export function PageTransition() {
                         },
                     }}
                 >
+                    <GrainOverlay opacity={0.08} />
+
                     <span className="font-archivo text-4xl uppercase tracking-tight">
                         {pageName}
                     </span>

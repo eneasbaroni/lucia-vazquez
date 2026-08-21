@@ -5,7 +5,7 @@ type PageHeroProps = {
 
 export function PageHero({ title, description }: PageHeroProps) {
     return (
-        <section className="relative flex h-[70vh] w-full items-end justify-between gap-10 bg-white px-10 pb-12 text-black mobile:flex-col mobile:items-start mobile:gap-6 mobile:px-5">
+        <section className="relative flex h-[70vh] w-full items-end justify-between gap-10 bg-white px-10 pb-12 text-black mobile:flex-col mobile:items-start mobile:justify-end mobile:gap-6 mobile:px-5">
             <div
                 className="pointer-events-none absolute top-1/2 left-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/4"
                 style={{
