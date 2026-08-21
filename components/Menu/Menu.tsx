@@ -86,6 +86,20 @@ export function Menu() {
                             ease: CURTAIN_EASE,
                         }}
                     >
+                        <div
+                            className="pointer-events-none absolute top-1/2 left-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/[0.08]"
+                            style={{
+                                WebkitMaskImage: "url('/images/logo.svg')",
+                                maskImage: "url('/images/logo.svg')",
+                                WebkitMaskRepeat: "no-repeat",
+                                maskRepeat: "no-repeat",
+                                WebkitMaskPosition: "center",
+                                maskPosition: "center",
+                                WebkitMaskSize: "contain",
+                                maskSize: "contain",
+                            }}
+                        />
+
                         <nav className="flex h-dvh w-full flex-col items-center font-stretch-expanded justify-center gap-4 px-10 mobile:px-5">
                             {LINKS.map((link, index) => (
                                 <MenuLink
@@ -118,7 +132,7 @@ export function Menu() {
                                 className={`w-full ${stripe.color}`}
                                 initial={{ height: 0 }}
                                 animate={{
-                                    height: ["0dvh", "3.4dvh", "0dvh"],
+                                    height: ["0dvh", stripe.peakHeight, "0dvh"],
                                     transition: {
                                         duration: stripe.duration,
                                         times: [0, 0.5, 1],
@@ -127,7 +141,7 @@ export function Menu() {
                                     },
                                 }}
                                 exit={{
-                                    height: ["0dvh", "3.4dvh", "0dvh"],
+                                    height: ["0dvh", stripe.peakHeight, "0dvh"],
                                     transition: {
                                         duration: stripe.exitDuration,
                                         times: [0, 0.5, 1],

@@ -21,10 +21,10 @@ export function MenuLink({ href, label, index, onClick }: MenuLinkProps) {
         <MotionLink
             href={href}
             onClick={onClick}
-            className="font-archivo block h-[1em] overflow-hidden text-[clamp(2.5rem,7vw,5rem)] leading-none font-stretch-expanded text-white uppercase"
+            className="font-archivo block h-[1em] overflow-hidden text-lg leading-none font-stretch-expanded text-white uppercase"
         >
             <motion.span
-                className="flex flex-col"
+                className="flex flex-col text-center"
                 initial={{ y: "100%" }}
                 animate={{
                     y: "0%",
@@ -49,7 +49,7 @@ export function MenuLink({ href, label, index, onClick }: MenuLinkProps) {
                 </span>
                 <span
                     aria-hidden="true"
-                    className="block h-[1em] overflow-hidden leading-none"
+                    className="font-instrument-serif block h-[1em] overflow-hidden font-stretch-normal leading-none italic"
                 >
                     {label}
                 </span>
