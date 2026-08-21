@@ -83,7 +83,7 @@ export function PageTransition() {
                 >
                     <GrainOverlay opacity={0.08} />
 
-                    <span className="font-archivo text-4xl uppercase tracking-tight">
+                    <span className="font-archivo text-2xl mobile:text-sm uppercase tracking-tight">
                         {pageName}
                     </span>
                 </motion.div>
