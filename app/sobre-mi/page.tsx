@@ -5,6 +5,7 @@ export default function SobreMi() {
     return (
         <main className="flex flex-1 flex-col bg-white">
             <PageHero
+                image="/images/portfolio.jpg"
                 title={
                     <>
                         S

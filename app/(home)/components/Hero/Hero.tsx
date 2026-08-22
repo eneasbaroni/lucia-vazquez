@@ -23,20 +23,6 @@ export function Hero() {
             </div>
 
             <div className="absolute inset-0 flex items-end justify-between gap-10 px-10 pb-12 mobile:flex-col mobile:items-start mobile:justify-end mobile:gap-0 mobile:px-5 mobile:pb-2">
-                <div
-                    className="pointer-events-none absolute top-1/2 left-1/2 h-full w-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/[0.06] mobile:w-[90%]"
-                    style={{
-                        WebkitMaskImage: "url('/images/logo.svg')",
-                        maskImage: "url('/images/logo.svg')",
-                        WebkitMaskRepeat: "no-repeat",
-                        maskRepeat: "no-repeat",
-                        WebkitMaskPosition: "center",
-                        maskPosition: "center",
-                        WebkitMaskSize: "contain",
-                        maskSize: "contain",
-                    }}
-                />
-
                 <h1 className="leading-[0.85] tracking-tight uppercase text-5xl mobile:order-2">
                     Lucí
                     <span className="font-lacquer lowercase text-[3.5rem] leading-[0.85]">

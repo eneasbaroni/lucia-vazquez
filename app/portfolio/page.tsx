@@ -16,6 +16,7 @@ export default async function Portfolio({ searchParams }: PortfolioProps) {
     return (
         <main className="flex flex-1 flex-col bg-white">
             <PageHero
+                image="/images/portfolioB.jpg"
                 title={
                     <>
                         P

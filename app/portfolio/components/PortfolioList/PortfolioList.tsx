@@ -1,19 +1,32 @@
+"use client";
+
 import type { PortfolioItem } from "@/lib/types";
-import { PortfolioCardDesktop } from "../PortfolioCardDesktop/PortfolioCardDesktop";
-import { PortfolioCardMobile } from "../PortfolioCardMobile/PortfolioCardMobile";
+import { useScroll } from "motion/react";
+import { useRef } from "react";
+import { PortfolioCard } from "../PortfolioCard/PortfolioCard";
 
 type PortfolioListProps = {
     projects: PortfolioItem[];
 };
 
 export function PortfolioList({ projects }: PortfolioListProps) {
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start start", "end end"],
+    });
+
     return (
-        <div className="flex flex-col overflow-x-hidden">
-            {projects.map((project) => (
-                <div key={project.slug}>
-                    <PortfolioCardDesktop project={project} />
-                    <PortfolioCardMobile project={project} />
-                </div>
+        <div ref={containerRef}>
+            {projects.map((project, index) => (
+                <PortfolioCard
+                    key={project.slug}
+                    project={project}
+                    index={index}
+                    total={projects.length}
+                    scrollYProgress={scrollYProgress}
+                />
             ))}
         </div>
     );
