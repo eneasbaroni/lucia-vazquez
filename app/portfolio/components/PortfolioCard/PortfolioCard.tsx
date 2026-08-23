@@ -14,7 +14,10 @@ type PortfolioCardProps = {
 };
 
 const MIN_SCALE = 0.88;
+const MIN_CARD_SCALE = 0.97;
+const SECTION_VH = 100;
 const HOLD_VH = 35;
+const CARD_UNIT_VH = SECTION_VH + HOLD_VH;
 const HOVER_INTERVAL_MS = 900;
 
 export function PortfolioCard({
@@ -26,15 +29,39 @@ export function PortfolioCard({
     const [isHovered, setIsHovered] = useState(false);
     const [imageIndex, setImageIndex] = useState(0);
 
-    const start = index / total;
-    const end = (index + 1) / total;
-    const windowScale = useTransform(
+    // scrollYProgress reaches 1 when the container's end meets the
+    // viewport's end (offset "end end"), i.e. after scrolling only
+    // (total * CARD_UNIT_VH - SECTION_VH) worth of height — one
+    // viewport short of the container's full height. So progress is
+    // NOT proportional to index/total; it has to be derived from the
+    // actual scrollable distance.
+    //
+    // All sections share the same scroll container, so a card doesn't
+    // "unstick" on its own — it stays pinned (already shrunk, already
+    // faded) until the next card's section reaches the top and covers
+    // it with a higher z-index. That happens a full CARD_UNIT_VH later,
+    // not just SECTION_VH later.
+    const scrollableVh = total * CARD_UNIT_VH - SECTION_VH;
+    const start = (index * CARD_UNIT_VH) / scrollableVh;
+    // The last card has no next section to cover it, so its raw
+    // cover point falls past 1 — clamp it, since scrollYProgress
+    // (and the offsets Framer Motion feeds to the WAAPI) never go
+    // beyond [0, 1].
+    const coverPoint = Math.min(
+        1,
+        ((index + 1) * CARD_UNIT_VH) / scrollableVh,
+    );
+
+    const imageScale = useTransform(
         scrollYProgress,
-        [start, end],
+        [start, coverPoint],
         [1, MIN_SCALE],
     );
-    const imageScale = useTransform(windowScale, (value) => 1 / value);
-
+    const cardScale = useTransform(
+        scrollYProgress,
+        [start, coverPoint],
+        [1, MIN_CARD_SCALE],
+    );
     useEffect(() => {
         if (!isHovered || project.images.length < 2) return;
 
@@ -54,20 +81,20 @@ export function PortfolioCard({
         <>
             <section
                 style={{ zIndex: index + 1 }}
-                className="sticky top-0 h-dvh w-full bg-black text-white"
+                className="sticky top-0 h-dvh w-full bg-linear-to-b from-transparent from-50% to-lv-cream to-50% text-black"
             >
                 <Link
                     href={`/portfolio/${project.slug}`}
-                    className="relative flex h-full w-full items-end gap-10 overflow-hidden px-10 py-14 mobile:px-5 mobile:py-8"
+                    className="flex h-full w-full flex-col items-start justify-center gap-6 px-10 py-14 pl-[29%] mobile:px-5 mobile:py-8 mobile:pl-5"
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={handleMouseLeave}
                 >
                     <motion.div
-                        className="absolute inset-0"
-                        style={{ scale: windowScale }}
+                        className="flex w-full origin-center items-center justify-center overflow-hidden rounded-xl bg-white p-10 will-change-transform mobile:p-5"
+                        style={{ scale: cardScale }}
                     >
                         <motion.div
-                            className="absolute inset-0"
+                            className="relative aspect-[16/9] w-full origin-center will-change-transform"
                             style={{ scale: imageScale }}
                         >
                             <Image
@@ -78,21 +105,15 @@ export function PortfolioCard({
                                 className="object-cover"
                             />
                         </motion.div>
-
-                        <div className="pointer-events-none absolute inset-0 bg-black/40" />
                     </motion.div>
 
-                    <div className="relative flex flex-1 flex-col gap-4">
-                        <h3 className="font-archivo w-[40dvw] text-[clamp(1.75rem,4vw,3rem)] leading-none uppercase tracking-tight mobile:w-full">
-                            {project.title}
-                        </h3>
-
-                        <span className="text-xs font-light tracking-widest text-white/50 uppercase">
-                            Ver proyecto
+                    <div className="flex w-full items-center gap-4 border-b border-black/30">
+                        <span className="font-archivo pb-1 text-sm font-black tracking-normal uppercase font-stretch-80%">
+                            {project.client}
                         </span>
 
-                        <span className="text-sm tracking-widest text-white/60 uppercase">
-                            {project.client}
+                        <span className="font-instrument-serif pb-1 text-base text-black/70">
+                            {project.title}
                         </span>
                     </div>
                 </Link>
