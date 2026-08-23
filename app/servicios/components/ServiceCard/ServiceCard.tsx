@@ -3,6 +3,7 @@
 import type { Service } from "@/lib/types";
 import { motion, useTransform, type MotionValue } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 
 type ServiceCardProps = {
     service: Service;
@@ -13,6 +14,21 @@ type ServiceCardProps = {
 
 const MIN_SCALE = 0.88;
 const HOLD_VH = 35;
+
+function renderAccented(title: string, accentIndices: number[]) {
+    return title.split("").map((char, i) =>
+        accentIndices.includes(i) ? (
+            <span
+                key={i}
+                className="font-lacquer lowercase text-[1.167em] leading-[0.1]"
+            >
+                {char}
+            </span>
+        ) : (
+            char
+        ),
+    );
+}
 
 export function ServiceCard({
     service,
@@ -39,29 +55,60 @@ export function ServiceCard({
                     isDark ? "bg-black text-white" : "bg-white text-black"
                 }`}
             >
-                <span className="[writing-mode:vertical-rl] self-start rotate-180 text-sm tracking-widest uppercase opacity-60 mobile:order-2 mobile:rotate-0 mobile:[writing-mode:horizontal-tb]">
+                <span className="font-instrument-serif [writing-mode:vertical-rl] self-start rotate-180 pb-6 text-sm tracking-widest uppercase opacity-60 mobile:order-2 mobile:rotate-0 mobile:pb-0 mobile:[writing-mode:horizontal-tb]">
                     Servicio / {String(index + 1).padStart(2, "0")}
                 </span>
 
                 <div className="flex flex-1 flex-col justify-between py-4 mobile:order-3 mobile:flex-none mobile:justify-start mobile:gap-2 mobile:py-0">
-                    <h2 className="font-archivo max-w-xl text-[clamp(1.75rem,3.5vw,3.25rem)] leading-[0.95] tracking-tight uppercase mobile:text-[1.5rem]">
-                        {service.title}
+                    <h2 className="font-archivo ![font-stretch:80%] max-w-xl text-[clamp(1.75rem,3.5vw,3.25rem)] leading-[0.95] tracking-tight uppercase mobile:text-[1.5rem]">
+                        {renderAccented(service.title, service.accentIndices)}
                     </h2>
 
-                    <p
-                        className={`max-w-md border-t pt-4 text-sm font-light mobile:pt-2 mobile:text-xs ${
-                            isDark
-                                ? "border-white/20 text-white/70"
-                                : "border-black/20 text-black/60"
-                        }`}
-                    >
-                        {service.fullDescription}
-                    </p>
+                    <div className="flex flex-col gap-4">
+                        <Link
+                            href={`/portfolio?categoria=${service.slug}`}
+                            className={`font-archivo block h-[1em] overflow-hidden text-sm font-black [font-stretch:80%] tracking-widest ${
+                                isDark ? "text-white" : "text-black"
+                            }`}
+                        >
+                            <motion.span
+                                className="flex flex-col "
+                                whileHover={{
+                                    y: "-50%",
+                                    transition: {
+                                        duration: 0.3,
+                                        ease: "easeInOut",
+                                    },
+                                }}
+                            >
+                                <span className="block h-[1em] overflow-hidden leading-none">
+                                    Ver Portfolio
+                                </span>
+                                <span className="block h-[1em] overflow-hidden leading-none">
+                                    Ver Portfolio
+                                </span>
+                            </motion.span>
+                        </Link>
+
+                        <div
+                            className={`border-t ${
+                                isDark ? "border-white/20" : "border-black/20"
+                            }`}
+                        />
+
+                        <p
+                            className={`max-w-md self-end text-right text-sm font-light ${
+                                isDark ? "text-white/70" : "text-black/60"
+                            }`}
+                        >
+                            {service.fullDescription}
+                        </p>
+                    </div>
                 </div>
 
                 <div className="relative h-full w-[42%] shrink-0 mobile:order-1 mobile:h-44 mobile:w-full">
                     <motion.div
-                        className="absolute inset-0 overflow-hidden"
+                        className="absolute inset-0 overflow-hidden rounded-2xl"
                         style={{ scale: windowScale }}
                     >
                         <motion.div

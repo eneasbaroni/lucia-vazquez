@@ -1,6 +1,7 @@
 export type Service = {
     slug: string;
     title: string;
+    accentIndices: number[];
     shortDescription: string;
     fullDescription: string;
     images: string[];
