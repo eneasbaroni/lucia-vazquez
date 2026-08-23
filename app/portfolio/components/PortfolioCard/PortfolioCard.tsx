@@ -85,12 +85,12 @@ export function PortfolioCard({
             >
                 <Link
                     href={`/portfolio/${project.slug}`}
-                    className="flex h-full w-full flex-col items-start justify-center gap-6 px-10 py-14 pl-[29%] mobile:px-5 mobile:py-8 mobile:pl-5"
+                    className="flex h-full w-full flex-col items-start justify-center gap-6 px-10 py-14 pl-[29%]"
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={handleMouseLeave}
                 >
                     <motion.div
-                        className="flex w-full origin-center items-center justify-center overflow-hidden rounded-xl bg-white p-10 will-change-transform mobile:p-5"
+                        className="flex w-full origin-center items-center justify-center overflow-hidden rounded-xl bg-white p-10 will-change-transform"
                         style={{ scale: cardScale }}
                     >
                         <motion.div
