@@ -29,7 +29,7 @@ export function PageHero({ image, title, description }: PageHeroProps) {
                     {title}
                 </h1>
 
-                <p className="max-w-md leading-none text-right text-sm font-light text-white/60 mobile:hidden">
+                <p className="max-w-md leading-none text-right text-sm mobile:text-xs font-light text-white/60 mobile:text-white/80 mobile:order-1 mobile:mb-3 mobile:max-w-none mobile:text-left">
                     {description}
                 </p>
             </div>
