@@ -15,5 +15,7 @@ export type PortfolioItem = {
     client: string;
     shortDescription: string;
     fullDescription: string;
+    media: "image" | "video";
     images: string[];
+    videos?: string[];
 };

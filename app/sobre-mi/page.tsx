@@ -12,7 +12,8 @@ export default function SobreMi() {
     return (
         <main className="flex flex-1 flex-col bg-white">
             <PageHero
-                image="/images/portfolio.jpg"
+                /* image="/images/portfolio.jpg" */
+                image="/images/about/about_00.png"
                 title={
                     <>
                         S

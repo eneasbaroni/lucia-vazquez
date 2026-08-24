@@ -2,9 +2,8 @@
 
 import type { PortfolioItem } from "@/lib/types";
 import { motion, useTransform, type MotionValue } from "motion/react";
-import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { PortfolioMedia } from "../PortfolioMedia/PortfolioMedia";
 
 type PortfolioCardProps = {
     project: PortfolioItem;
@@ -18,7 +17,6 @@ const MIN_CARD_SCALE = 0.97;
 const SECTION_VH = 100;
 const HOLD_VH = 35;
 const CARD_UNIT_VH = SECTION_VH + HOLD_VH;
-const HOVER_INTERVAL_MS = 900;
 
 export function PortfolioCard({
     project,
@@ -26,9 +24,6 @@ export function PortfolioCard({
     total,
     scrollYProgress,
 }: PortfolioCardProps) {
-    const [isHovered, setIsHovered] = useState(false);
-    const [imageIndex, setImageIndex] = useState(0);
-
     // scrollYProgress reaches 1 when the container's end meets the
     // viewport's end (offset "end end"), i.e. after scrolling only
     // (total * CARD_UNIT_VH - SECTION_VH) worth of height — one
@@ -62,21 +57,6 @@ export function PortfolioCard({
         [start, coverPoint],
         [1, MIN_CARD_SCALE],
     );
-    useEffect(() => {
-        if (!isHovered || project.images.length < 2) return;
-
-        const interval = setInterval(() => {
-            setImageIndex((prev) => (prev + 1) % project.images.length);
-        }, HOVER_INTERVAL_MS);
-
-        return () => clearInterval(interval);
-    }, [isHovered, project.images.length]);
-
-    function handleMouseLeave() {
-        setIsHovered(false);
-        setImageIndex(0);
-    }
-
     return (
         <>
             <section
@@ -86,8 +66,6 @@ export function PortfolioCard({
                 <Link
                     href={`/portfolio/${project.slug}`}
                     className="flex h-full w-full flex-col items-start justify-center gap-6 px-10 py-14 pl-[29%]"
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={handleMouseLeave}
                 >
                     <motion.div
                         className="flex w-full origin-center items-center justify-center overflow-hidden rounded-xl bg-white p-10 will-change-transform"
@@ -97,13 +75,7 @@ export function PortfolioCard({
                             className="relative aspect-[16/9] w-full origin-center will-change-transform"
                             style={{ scale: imageScale }}
                         >
-                            <Image
-                                src={project.images[imageIndex]}
-                                alt={project.title}
-                                fill
-                                sizes="100vw"
-                                className="object-cover"
-                            />
+                            <PortfolioMedia project={project} sizes="100vw" />
                         </motion.div>
                     </motion.div>
 

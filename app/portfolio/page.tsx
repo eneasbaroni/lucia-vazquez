@@ -1,7 +1,10 @@
 import { PageHero } from "@/components";
-import portfolio from "@/data/portfolio.json";
+import portfolioData from "@/data/portfolio.json";
+import type { PortfolioItem } from "@/lib/types";
 import type { Metadata } from "next";
 import { PortfolioList } from "./components";
+
+const portfolio = portfolioData as PortfolioItem[];
 
 export const metadata: Metadata = {
     title: "Portfolio",

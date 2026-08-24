@@ -5,7 +5,7 @@
         "accentIndices": [1, 7, 10, 12, 25, 30, 32, 39, 43],
         "shortDescription": "Construcción de identidad visual, conceptos y propuestas creativas para artistas y proyectos.",
         "fullDescription": "Construcción de conceptos, desarrollo estético, narrativa visual y propuestas creativas para artistas y marcas. Estilismo y dirección creativa en proyectos como Q'Lokura, Caballeros de la Quema y G-Sony.",
-        "images": ["/images/services/service_01.jpg"],
+        "images": ["/images/services/service_05.png"],
         "relatedProjects": []
     },
     {
@@ -14,7 +14,7 @@
         "accentIndices": [1, 8, 13, 22, 27, 32, 42],
         "shortDescription": "Diseño gráfico y comunicación visual: piezas, campañas y universos visuales completos.",
         "fullDescription": "Diseño gráfico y comunicación (Photoshop, Illustrator, Canva, CapCut, Premiere, Procreate): flyers, campañas, piezas gráficas y contenido digital. Desarrollo integral de identidad visual, como el universo de personajes creado para el álbum 'Nos Cruzas en el Pogo' de Soui Uno.",
-        "images": ["/images/services/service_01.jpg"],
+        "images": ["/images/services/service_04.jpg"],
         "relatedProjects": []
     },
     {
@@ -23,7 +23,7 @@
         "accentIndices": [2, 8, 18, 30],
         "shortDescription": "Filmación, edición y generación de contenido para artistas, marcas y proyectos.",
         "fullDescription": "Filmación, edición y campañas de comunicación artística para giras y presentaciones, como la gira 2026 de Serú Girán, 'En Movimiento Tour' de Q'Lokura, 'Esencia Lebón' de David Lebón y contenido para ACTC.",
-        "images": ["/images/services/service_01.jpg"],
+        "images": ["/images/services/service_01.webp"],
         "relatedProjects": []
     },
     {
@@ -32,7 +32,7 @@
         "accentIndices": [2, 8, 17, 28, 34],
         "shortDescription": "Coordinación operativa, logística y producción integral de espectáculos masivos.",
         "fullDescription": "Producción integral de eventos y shows en espacios como Movistar Arena, Teatro Gran Rex, Plaza de la Música (Córdoba), Tecnópolis y Microestadio Tecnópolis, trabajando junto a artistas como Soui Uno, Rip Dillom, Myke Towers, Q'Lokura, Los Herrera, Coti, Valentino Merlo, Patricia Sosa y Palito Ortega.",
-        "images": ["/images/services/service_01.jpg"],
+        "images": ["/images/services/service_03.jpg"],
         "relatedProjects": []
     },
     {
@@ -41,7 +41,7 @@
         "accentIndices": [1, 10, 20, 30, 35, 40],
         "shortDescription": "Acompañamiento operativo, logística y hospitality para artistas durante eventos y producciones.",
         "fullDescription": "Coordinación y acompañamiento integral de artistas y proyectos: logística, asistencia operativa, gestión de requerimientos, hospitality, preparación de camarines y organización de espacios, junto a artistas como La Mona Jiménez, Pimpinela, Myke Towers y Ricardo Arjona, y medios como Urbana Play, Vorterix y Un Poco de Ruido.",
-        "images": ["/images/services/service_01.jpg"],
+        "images": ["/images/services/service_06.png"],
         "relatedProjects": []
     }
 ]

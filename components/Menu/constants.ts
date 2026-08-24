@@ -1,10 +1,10 @@
 export const LINKS: { label: string; href: string; accentIndices: number[] }[] =
     [
         { label: "Inicio", href: "/", accentIndices: [2, 5] },
-        { label: "Sobre mí", href: "/sobre-mi", accentIndices: [1, 7] },
         { label: "Servicios", href: "/servicios", accentIndices: [1, 7] },
         { label: "Portfolio", href: "/portfolio", accentIndices: [1, 4] },
-        { label: "Contacto", href: "/contacto", accentIndices: [2, 7] },
+        { label: "Sobre mí", href: "/sobre-mi", accentIndices: [1, 7] },
+        /*  { label: "Contacto", href: "/contacto", accentIndices: [2, 7] }, */
     ];
 
 export const STRIPES: {
