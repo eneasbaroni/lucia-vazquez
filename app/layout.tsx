@@ -5,7 +5,14 @@ import {
     Google_Sans,
     Lacquer,
 } from "next/font/google";
-import { Footer, Logo, Menu, PageTransition, SmoothScroll } from "@/components";
+import {
+    Footer,
+    IntroReveal,
+    Logo,
+    Menu,
+    PageTransition,
+    SmoothScroll,
+} from "@/components";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -50,6 +57,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 <Logo />
                 <Menu />
                 <PageTransition />
+                <IntroReveal />
                 {children}
                 <Footer />
             </body>
