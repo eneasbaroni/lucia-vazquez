@@ -22,7 +22,7 @@ type PortfolioFiltersProps = {
 };
 
 function filterClassName(isActive: boolean) {
-    return `font-archivo font-semibold block h-[1em] overflow-hidden text-lg tracking-normal transition-all font-stretch-80%  ${
+    return `font-archivo font-semibold block h-[1em] overflow-hidden text-lg tracking-normal transition-all font-stretch-70% mobile:text-sm  ${
         isActive ? "text-black/30" : "text-black"
     }`;
 }
@@ -83,6 +83,14 @@ export function PortfolioFilters({ scrollYProgress }: PortfolioFiltersProps) {
     function handleNavigate(href: string, label: string) {
         if (isTransitioning) return;
 
+        // On mobile the filters already sit right below the hero, above
+        // the (short, non-stacking) card list, so there's no jarring
+        // jump to hide — just navigate.
+        if (isMobile) {
+            router.push(href, { scroll: false });
+            return;
+        }
+
         setPendingLabel(label);
         setIsTransitioning(true);
 
@@ -112,7 +120,7 @@ export function PortfolioFilters({ scrollYProgress }: PortfolioFiltersProps) {
                         ? undefined
                         : { opacity: scrollOpacity, pointerEvents }
                 }
-                className="fixed bottom-16 left-10 z-100 flex flex-col items-start gap-0 mobile:static mobile:bottom-auto mobile:left-auto mobile:flex-row mobile:flex-wrap mobile:items-center mobile:gap-x-6 mobile:gap-y-2 mobile:px-5 mobile:pb-10"
+                className="fixed bottom-16 left-10 z-100 flex flex-col items-start gap-0 mobile:static mobile:bottom-auto mobile:left-auto mobile:flex-row mobile:flex-wrap mobile:items-center mobile:justify-center mobile:gap-x-4 mobile:gap-y-1 mobile:px-5 mobile:pt-8 mobile:pb-10 mobile:!pointer-events-auto mobile:!opacity-100"
             >
                 <FilterLink
                     href={pathname}

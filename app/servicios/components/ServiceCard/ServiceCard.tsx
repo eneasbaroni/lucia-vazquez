@@ -51,23 +51,23 @@ export function ServiceCard({
         <>
             <section
                 style={{ zIndex: index + 1 }}
-                className={`sticky top-0 flex h-dvh w-full items-stretch gap-8 px-10 py-14 mobile:flex-col mobile:gap-3 mobile:px-5 mobile:py-8 ${
+                className={`sticky top-0 flex h-dvh w-full items-stretch gap-8 px-10 py-14 mobile:flex-col mobile:gap-3 mobile:px-5 mobile:pt-14 mobile:pb-8 ${
                     isDark ? "bg-black text-white" : "bg-white text-black"
                 }`}
             >
-                <span className="font-instrument-serif [writing-mode:vertical-rl] self-start rotate-180 pb-6 text-sm tracking-widest uppercase opacity-60 mobile:order-2 mobile:rotate-0 mobile:pb-0 mobile:[writing-mode:horizontal-tb]">
+                <span className="font-instrument-serif [writing-mode:vertical-rl] self-start rotate-180 pb-6 text-sm mobile:text-xs tracking-widest uppercase opacity-60 mobile:order-2 mobile:rotate-0 mobile:pb-0 mobile:[writing-mode:horizontal-tb]">
                     Servicio / {String(index + 1).padStart(2, "0")}
                 </span>
 
-                <div className="flex flex-1 flex-col justify-between py-4 mobile:order-3 mobile:flex-none mobile:justify-start mobile:gap-2 mobile:py-0">
+                <div className="flex flex-1 flex-col justify-between py-4 mobile:order-3 mobile:justify-start mobile:gap-2 mobile:py-0">
                     <h2 className="font-archivo ![font-stretch:80%] max-w-xl text-[clamp(1.75rem,3.5vw,3.25rem)] leading-[0.95] tracking-tight uppercase mobile:text-[1.5rem]">
                         {renderAccented(service.title, service.accentIndices)}
                     </h2>
 
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col mobile:mt-4 gap-4 mobile:flex-1">
                         <Link
                             href={`/portfolio?categoria=${service.slug}`}
-                            className={`font-archivo block h-[1em] overflow-hidden text-sm font-black [font-stretch:80%] tracking-widest ${
+                            className={`font-archivo block h-[1em] overflow-hidden text-base font-black [font-stretch:70%] tracking-0 ${
                                 isDark ? "text-white" : "text-black"
                             }`}
                         >
@@ -97,8 +97,10 @@ export function ServiceCard({
                         />
 
                         <p
-                            className={`max-w-md self-end text-right text-sm font-light ${
-                                isDark ? "text-white/70" : "text-black/60"
+                            className={`max-w-md self-end text-right text-sm font-light mobile:font-archivo mobile:font-bold mobile:mt-auto mobile:self-start mobile:text-left ${
+                                isDark
+                                    ? "text-white/70 mobile:text-white"
+                                    : "text-black/60 mobile:text-black"
                             }`}
                         >
                             {service.fullDescription}
