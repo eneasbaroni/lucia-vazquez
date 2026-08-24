@@ -40,7 +40,7 @@ export function Hero() {
                     al
                 </h1>
 
-                <p className="max-w-xs text-right text-sm font-light text-white/70 mobile:hidden">
+                <p className="max-w-xs text-right text-sm font-bold text-white/70 mobile:hidden">
                     Desarrollo creativo, comunicación visual y gestión integral
                     de proyectos artísticos.
                 </p>

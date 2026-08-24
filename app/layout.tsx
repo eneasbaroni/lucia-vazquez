@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import {
-    Archivo,
-    Instrument_Serif,
-    Google_Sans,
-    Lacquer,
-} from "next/font/google";
+import { Archivo, Instrument_Serif, Lacquer } from "next/font/google";
 import {
     Footer,
     IntroReveal,
@@ -27,12 +22,6 @@ const instrumentSerif = Instrument_Serif({
     weight: ["400"],
 });
 
-const googleSans = Google_Sans({
-    subsets: ["latin"],
-    variable: "--font-google-sans",
-    weight: ["400"],
-});
-
 const lacquer = Lacquer({
     subsets: ["latin"],
     variable: "--font-lacquer",
@@ -50,7 +39,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <html
             lang="es"
             data-scroll-behavior="smooth"
-            className={`${archivo.variable} ${instrumentSerif.variable} ${googleSans.variable} ${lacquer.variable} h-full antialiased`}
+            className={`${archivo.variable} ${instrumentSerif.variable} ${lacquer.variable} h-full antialiased`}
         >
             <body className="min-h-full flex flex-col">
                 <SmoothScroll />
