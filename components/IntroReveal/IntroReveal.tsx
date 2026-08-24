@@ -96,19 +96,16 @@ export function IntroReveal() {
 
         if (pageTransitionState.isActive) {
             // Arriving via a menu click: PageTransition's own black
-            // curtain (with the page name) is still up. Keep our overlay
-            // hidden until that curtain starts lifting. It dispatches
-            // "page-transition-lift" at the exact instant it begins its
-            // own 0.7s exit (see PageTransition.tsx) — since our overlay
-            // sits above the curtain (z-500 vs z-35), showing it right
-            // then means it instantly takes over as the curtain retreats,
-            // so the page underneath (still mid-slide) is never exposed.
-            white.style.opacity = "0";
-            black.style.opacity = "0";
+            // curtain (with the page name) is still up, and our overlay
+            // sits *behind* both it and the menu (z-20 vs z-30/35) — so
+            // showing it now is invisible until the curtain actually
+            // lifts away, at which point its own 0.7s exit does the
+            // reveal for us naturally, instead of our overlay needing to
+            // pop or fade in front of it.
+            show(white, black);
 
             const handleLift = () => {
                 window.removeEventListener("page-transition-lift", handleLift);
-                show(white, black);
                 grow(white, black);
             };
             window.addEventListener("page-transition-lift", handleLift);
@@ -135,7 +132,7 @@ export function IntroReveal() {
         <>
             <div
                 ref={whiteRef}
-                className="pointer-events-none fixed inset-0 z-500 bg-white"
+                className="pointer-events-none fixed inset-0 z-20 bg-white"
                 style={{
                     opacity: startVisible ? 1 : 0,
                     maskImage:
@@ -155,7 +152,7 @@ export function IntroReveal() {
 
             <div
                 ref={blackRef}
-                className="pointer-events-none fixed inset-0 z-500 bg-black"
+                className="pointer-events-none fixed inset-0 z-20 bg-black"
                 style={{
                     opacity: startVisible ? 1 : 0,
                     maskImage: "url('/images/logo.svg')",
