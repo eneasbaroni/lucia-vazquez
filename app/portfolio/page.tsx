@@ -1,6 +1,13 @@
 import { PageHero } from "@/components";
 import portfolio from "@/data/portfolio.json";
+import type { Metadata } from "next";
 import { PortfolioList } from "./components";
+
+export const metadata: Metadata = {
+    title: "Portfolio",
+    description:
+        "Dirección creativa, producción audiovisual y producción integral de eventos, junto a artistas y proyectos como Q'Lokura, Serú Girán, Soui Uno y Caballeros de la Quema.",
+};
 
 type PortfolioProps = {
     searchParams: Promise<{ categoria?: string }>;

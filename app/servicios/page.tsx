@@ -1,6 +1,13 @@
 import { PageHero } from "@/components";
 import services from "@/data/services.json";
+import type { Metadata } from "next";
 import { ServicesStack } from "./components";
+
+export const metadata: Metadata = {
+    title: "Servicios",
+    description:
+        "Dirección creativa, diseño gráfico, producción audiovisual y producción integral de eventos, a medida de cada proyecto.",
+};
 
 export default function Servicios() {
     return (

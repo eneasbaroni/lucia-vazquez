@@ -1,5 +1,12 @@
 import { PageHero } from "@/components";
+import type { Metadata } from "next";
 import { AboutMe } from "./components";
+
+export const metadata: Metadata = {
+    title: "Sobre mí",
+    description:
+        "Dirección creativa, comunicación visual y gestión integral de proyectos artísticos, con una trayectoria que comenzó en la pintura realista al óleo.",
+};
 
 export default function SobreMi() {
     return (

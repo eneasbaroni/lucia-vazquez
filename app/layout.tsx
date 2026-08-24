@@ -28,10 +28,32 @@ const lacquer = Lacquer({
     weight: ["400"],
 });
 
+const SITE_NAME = "Lucía Vázquez Leal";
+const SITE_DESCRIPTION =
+    "Dirección creativa, diseño gráfico, producción audiovisual y producción integral de eventos.";
+// Update if/when a custom domain replaces this Vercel URL.
+const SITE_URL = "https://lucia-vazquez.vercel.app";
+
 export const metadata: Metadata = {
-    title: "Lucía Vázquez Leal",
-    description:
-        "Dirección creativa, diseño gráfico, producción audiovisual y producción integral de eventos.",
+    metadataBase: new URL(SITE_URL),
+    title: {
+        default: SITE_NAME,
+        template: `%s | ${SITE_NAME}`,
+    },
+    description: SITE_DESCRIPTION,
+    openGraph: {
+        title: SITE_NAME,
+        description: SITE_DESCRIPTION,
+        url: SITE_URL,
+        siteName: SITE_NAME,
+        locale: "es_AR",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: SITE_NAME,
+        description: SITE_DESCRIPTION,
+    },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
