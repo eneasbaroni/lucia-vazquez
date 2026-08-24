@@ -9,6 +9,19 @@
         "media": "image",
         "images": ["/images/portfolio/portfolio_01.jpg"]
     },
+      {
+        "slug": "seru-giran-gira-2026",
+        "title": "Serú Girán — Gira 2026",
+        "category": "produccion-audiovisual",
+        "client": "Serú Girán",
+        "shortDescription": "Edición audiovisual y campañas de marketing para la gira 2026, con presentación en Movistar Arena.",
+        "fullDescription": "Edición audiovisual y campañas de marketing para la gira 2026 de Serú Girán, incluyendo su presentación en el Movistar Arena y gira nacional.",
+        "media": "video",
+        "images": ["/images/portfolio/portfolio_05.jpg"],
+        "videos": [
+            "https://res.cloudinary.com/dbhvff8gt/video/upload/q_auto/v1787600413/portfolio_05_m3wr0w.mp4"
+        ]
+    },
     {
         "slug": "caballeros-de-la-quema-movistar-arena",
         "title": "Caballeros de la Quema — Movistar Arena",
@@ -41,19 +54,6 @@
         "fullDescription": "Desarrollo integral de visuales e identidad visual para el álbum 'Nos Cruzas en el Pogo' de Soui Uno, creando el universo visual y el diseño de personajes de cada canción, acompañando la construcción estética y narrativa del proyecto artístico.",
         "media": "image",
         "images": ["/images/portfolio/portfolio_04.jpg"]
-    },
-    {
-        "slug": "seru-giran-gira-2026",
-        "title": "Serú Girán — Gira 2026",
-        "category": "produccion-audiovisual",
-        "client": "Serú Girán",
-        "shortDescription": "Edición audiovisual y campañas de marketing para la gira 2026, con presentación en Movistar Arena.",
-        "fullDescription": "Edición audiovisual y campañas de marketing para la gira 2026 de Serú Girán, incluyendo su presentación en el Movistar Arena y gira nacional.",
-        "media": "video",
-        "images": ["/images/portfolio/portfolio_05.jpg"],
-        "videos": [
-            "https://res.cloudinary.com/dbhvff8gt/video/upload/q_auto/v1787600413/portfolio_05_m3wr0w.mp4"
-        ]
     },
     {
         "slug": "qlokura-en-movimiento-tour",
