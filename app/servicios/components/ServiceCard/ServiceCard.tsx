@@ -14,7 +14,9 @@ type ServiceCardProps = {
 };
 
 const MIN_SCALE = 0.88;
+const SECTION_VH = 100;
 const HOLD_VH = 35;
+const CARD_UNIT_VH = SECTION_VH + HOLD_VH;
 
 export function ServiceCard({
     service,
@@ -24,8 +26,17 @@ export function ServiceCard({
 }: ServiceCardProps) {
     const isDark = index % 2 === 0;
 
-    const start = index / total;
-    const end = (index + 1) / total;
+    // Same math as PortfolioCard: scrollYProgress ("start start" →
+    // "end end") hits 1 one viewport before the container's end, so it
+    // is NOT proportional to index / total. Each card reaches the top
+    // of the screen after index * CARD_UNIT_VH of scroll, so that's
+    // where its shrink must start — otherwise every card after the
+    // first starts shrinking early, and later cards more so.
+    const scrollableVh = total * CARD_UNIT_VH - SECTION_VH;
+    const start = (index * CARD_UNIT_VH) / scrollableVh;
+    // Ends when the next card covers it; the last card has none, so
+    // clamp to the end of the scroll range.
+    const end = Math.min(1, ((index + 1) * CARD_UNIT_VH) / scrollableVh);
     const windowScale = useTransform(
         scrollYProgress,
         [start, end],

@@ -16,7 +16,6 @@ export default function Servicios() {
     return (
         <main className="flex flex-1 flex-col bg-white">
             <PageHero
-                image="/images/services.jpg"
                 title={
                     <>
                         S
