@@ -1,3 +1,4 @@
+export { AccentedText } from "./AccentedText/AccentedText";
 export { Footer } from "./Footer/Footer";
 export { GrainOverlay } from "./GrainOverlay/GrainOverlay";
 export { IntroReveal } from "./IntroReveal/IntroReveal";

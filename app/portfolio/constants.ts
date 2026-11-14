@@ -1,7 +1,5 @@
-export const CATEGORIES = [
-    { slug: "direccion-creativa", label: "Dirección Creativa" },
-    { slug: "diseno-grafico", label: "Diseño Gráfico" },
-    { slug: "produccion-audiovisual", label: "Producción Audiovisual" },
-    { slug: "produccion-eventos", label: "Producción de Eventos" },
-    { slug: "coordinacion-artistas", label: "Coordinación de Artistas" },
-];
+import services from "@/data/services.json";
+
+// Portfolio filters ARE the services: same slugs, same order, taken
+// straight from data/services.json so they can never drift apart.
+export const CATEGORIES = services.map(({ slug, label }) => ({ slug, label }));

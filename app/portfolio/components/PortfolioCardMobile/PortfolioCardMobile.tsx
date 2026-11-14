@@ -1,5 +1,4 @@
 import type { PortfolioItem } from "@/lib/types";
-import Link from "next/link";
 import { PortfolioMedia } from "../PortfolioMedia/PortfolioMedia";
 
 type PortfolioCardMobileProps = {
@@ -8,8 +7,7 @@ type PortfolioCardMobileProps = {
 
 export function PortfolioCardMobile({ project }: PortfolioCardMobileProps) {
     return (
-        <Link
-            href={`/portfolio/${project.slug}`}
+        <div
             className="flex w-full flex-col gap-3 px-5 pb-8"
         >
             <div className="relative aspect-video w-full overflow-hidden rounded-md">
@@ -25,6 +23,6 @@ export function PortfolioCardMobile({ project }: PortfolioCardMobileProps) {
                     {project.title}
                 </span>
             </div>
-        </Link>
+        </div>
     );
 }

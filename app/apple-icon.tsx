@@ -18,8 +18,8 @@ export default function AppleIcon() {
                 }}
             >
                 <svg
-                    width={110}
-                    height={59}
+                    width={88}
+                    height={130}
                     viewBox={LOGO_MARK_VIEW_BOX}
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"

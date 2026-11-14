@@ -1,47 +1,86 @@
 [
     {
-        "slug": "direccion-creativa",
-        "title": "Dirección creativa, estilismo y desarrollo artístico",
-        "accentIndices": [1, 7, 10, 12, 25, 30, 32, 39, 43],
-        "shortDescription": "Construcción de identidad visual, conceptos y propuestas creativas para artistas y proyectos.",
-        "fullDescription": "Construcción de conceptos, desarrollo estético, narrativa visual y propuestas creativas para artistas y marcas. Estilismo y dirección creativa en proyectos como Q'Lokura, Caballeros de la Quema y G-Sony.",
-        "images": ["/images/services/service_05.png"],
-        "relatedProjects": []
-    },
-    {
         "slug": "diseno-grafico",
+        "label": "Diseño Gráfico",
         "title": "Diseño gráfico, identidad y desarrollo visual",
         "accentIndices": [1, 8, 13, 22, 27, 32, 42],
         "shortDescription": "Diseño gráfico y comunicación visual: piezas, campañas y universos visuales completos.",
-        "fullDescription": "Diseño gráfico y comunicación (Photoshop, Illustrator, Canva, CapCut, Premiere, Procreate): flyers, campañas, piezas gráficas y contenido digital. Desarrollo integral de identidad visual, como el universo de personajes creado para el álbum 'Nos Cruzas en el Pogo' de Soui Uno.",
-        "images": ["/images/services/service_04.jpg"],
+        "fullDescription": "Diseño gráfico y comunicación (Photoshop, Illustrator, Canva, CapCut, Premiere, Procreate): flyers, campañas, piezas gráficas y contenido digital para proyectos como Q'Lokura en Tecnópolis y Los Herrera. Desarrollo integral de identidad visual, como el universo de personajes creado para el álbum 'Nos Cruzas en el Pogo' de Soui Uno.",
+        "media": [
+            { "type": "image", "src": "/images/services/diseno_grafico/qlokura.JPG", "label": "Q'Lokura" },
+            { "type": "video", "src": "https://res.cloudinary.com/dbhvff8gt/video/upload/q_auto/v1794682237/soui_f11a77.mp4", "label": "Soui Uno" },
+            { "type": "image", "src": "/images/services/diseno_grafico/herrera.jpg", "label": "Los Herrera" }
+        ],
         "relatedProjects": []
     },
     {
-        "slug": "produccion-audiovisual",
-        "title": "Producción audiovisual y edición",
-        "accentIndices": [2, 8, 18, 30],
-        "shortDescription": "Filmación, edición y generación de contenido para artistas, marcas y proyectos.",
-        "fullDescription": "Filmación, edición y campañas de comunicación artística para giras y presentaciones, como la gira 2026 de Serú Girán, 'En Movimiento Tour' de Q'Lokura, 'Esencia Lebón' de David Lebón y contenido para ACTC.",
-        "images": ["/images/services/service_01.webp"],
+        "slug": "direccion-creativa",
+        "label": "Dirección Creativa",
+        "title": "Dirección creativa, estilismo y desarrollo artístico",
+        "accentIndices": [1, 7, 10, 12, 25, 30, 32, 39, 43],
+        "shortDescription": "Construcción de identidad visual, conceptos y propuestas creativas para artistas y proyectos.",
+        "fullDescription": "Construcción de conceptos, desarrollo estético, narrativa visual y propuestas creativas para artistas y marcas. Estilismo, ambientación y guion para Chino y Nico de Q'Lokura en Tecnópolis, guion y dirección creativa para el primer Movistar Arena de Caballeros de la Quema, y estilismo y asistencia en set para G-Sony.",
+        "media": [
+            { "type": "image", "src": "/images/services/direccion_creativa/qlokura.png", "label": "Q'Lokura" },
+            { "type": "video", "src": "https://res.cloudinary.com/dbhvff8gt/video/upload/q_auto/v1794682348/caballeros_mydvpe.mp4", "label": "Caballeros de la Quema" },
+            { "type": "video", "src": "https://res.cloudinary.com/dbhvff8gt/video/upload/q_auto/v1787600414/portfolio_03_ki0pb2.mp4", "label": "G-Sony" }
+        ],
         "relatedProjects": []
     },
     {
-        "slug": "produccion-eventos",
+        "slug": "produccion-integral",
+        "label": "Producción Integral",
         "title": "Producción integral de eventos y shows",
         "accentIndices": [2, 8, 17, 28, 34],
         "shortDescription": "Coordinación operativa, logística y producción integral de espectáculos masivos.",
-        "fullDescription": "Producción integral de eventos y shows en espacios como Movistar Arena, Teatro Gran Rex, Plaza de la Música (Córdoba), Tecnópolis y Microestadio Tecnópolis, trabajando junto a artistas como Soui Uno, Rip Dillom, Myke Towers, Q'Lokura, Los Herrera, Coti, Valentino Merlo, Patricia Sosa y Palito Ortega.",
-        "images": ["/images/services/service_03.jpg"],
+        "fullDescription": "Producción integral de eventos y shows en espacios como Movistar Arena, Teatro Gran Rex, Plaza de la Música (Córdoba), Tecnópolis y Microestadio Tecnópolis, trabajando junto a artistas como Soui Uno, Rip Dillom, Myke Towers, Q'Lokura, Los Herrera, David Lebón, Coti, Valentino Merlo, Patricia Sosa y Palito Ortega.",
+        "media": [
+            { "type": "image", "src": "/images/services/produccion_integral/qlokura.jpg", "label": "Q'Lokura" },
+            { "type": "image", "src": "/images/services/produccion_integral/herrera.png", "label": "Los Herrera" },
+            { "type": "video", "src": "https://res.cloudinary.com/dbhvff8gt/video/upload/q_auto/v1794683054/lebon_plmq4n.mp4", "label": "David Lebón" },
+            { "type": "image", "src": "/images/services/produccion_integral/patricia.png", "label": "Patricia Sosa" },
+            { "type": "video", "src": "https://res.cloudinary.com/dbhvff8gt/video/upload/q_auto/v1794683051/palito_dzsoez.mp4", "label": "Palito Ortega" }
+        ],
+        "relatedProjects": []
+    },
+    {
+        "slug": "edicion-audiovisual",
+        "label": "Edición Audiovisual",
+        "title": "Edición audiovisual y comunicación artística",
+        "accentIndices": [1, 9, 17, 23, 30, 37, 43],
+        "shortDescription": "Edición, campañas y contenido para giras, presentaciones y marcas.",
+        "fullDescription": "Edición audiovisual, campañas de marketing y contenido para giras y presentaciones, como la gira 2026 de Serú Girán, 'En Movimiento Tour' de Q'Lokura, El Baile Inolvidable en Tecnópolis, 'Esencia Lebón' de David Lebón y contenido digital para ACTC.",
+        "media": [
+            { "type": "video", "src": "https://res.cloudinary.com/dbhvff8gt/video/upload/q_auto/v1787600413/portfolio_05_m3wr0w.mp4", "label": "Serú Girán" },
+            { "type": "video", "src": "https://res.cloudinary.com/dbhvff8gt/video/upload/q_auto/v1794684709/baile_f9jfvf.mp4", "label": "El Baile Inolvidable" },
+            { "type": "video", "src": "https://res.cloudinary.com/dbhvff8gt/video/upload/q_auto/v1794683845/patricia_w98gss.mp4", "label": "Patricia Sosa" },
+            { "type": "video", "src": "https://res.cloudinary.com/dbhvff8gt/video/upload/q_auto/v1794684570/actc_04_rzybwt.mp4", "label": "ACTC" }
+        ],
         "relatedProjects": []
     },
     {
         "slug": "coordinacion-artistas",
+        "label": "Coordinación de Artistas",
         "title": "Coordinación y asistencia integral para artistas",
         "accentIndices": [1, 10, 20, 30, 35, 40],
-        "shortDescription": "Acompañamiento operativo, logística y hospitality para artistas durante eventos y producciones.",
-        "fullDescription": "Coordinación y acompañamiento integral de artistas y proyectos: logística, asistencia operativa, gestión de requerimientos, hospitality, preparación de camarines y organización de espacios, junto a artistas como La Mona Jiménez, Pimpinela, Myke Towers y Ricardo Arjona, y medios como Urbana Play, Vorterix y Un Poco de Ruido.",
-        "images": ["/images/services/service_06.png"],
+        "shortDescription": "Acompañamiento operativo y logística para artistas durante eventos y producciones.",
+        "fullDescription": "Coordinación y acompañamiento integral de artistas y proyectos: logística, asistencia operativa, gestión de requerimientos y organización de espacios durante eventos, producciones y presentaciones, junto a artistas como La Mona Jiménez y Pimpinela, proyectos como ACTC y medios como Urbana Play, Vorterix y Un Poco de Ruido.",
+        "media": [
+            { "type": "video", "src": "https://res.cloudinary.com/dbhvff8gt/video/upload/q_auto/v1794684445/urbana_m6bxqw.mp4", "label": "Urbana Play" }
+        ],
+        "relatedProjects": []
+    },
+    {
+        "slug": "hospitalidad",
+        "label": "Hospitality",
+        "title": "Coordinación de hospitality y atención a artistas",
+        "accentIndices": [2, 10, 17, 23, 32, 42, 47],
+        "shortDescription": "Hospitality, camarines y asistencia integral para artistas.",
+        "fullDescription": "Coordinación de hospitality y asistencia integral: gestión de rider, ambientación, mobiliario, preparación de camarines, logística y acompañamiento operativo durante el evento, para artistas como Myke Towers (Tecnópolis, 2026) y Ricardo Arjona.",
+        "media": [
+            { "type": "image", "src": "/images/services/hospitalidad/mike.png", "label": "Myke Towers" },
+            { "type": "image", "src": "/images/services/hospitalidad/ricardo.png", "label": "Ricardo Arjona" }
+        ],
         "relatedProjects": []
     }
 ]

@@ -87,17 +87,7 @@ export function Menu() {
                         }}
                     >
                         <div
-                            className="pointer-events-none absolute top-1/2 left-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/[0.08]"
-                            style={{
-                                WebkitMaskImage: "url('/images/logo.svg')",
-                                maskImage: "url('/images/logo.svg')",
-                                WebkitMaskRepeat: "no-repeat",
-                                maskRepeat: "no-repeat",
-                                WebkitMaskPosition: "center",
-                                maskPosition: "center",
-                                WebkitMaskSize: "contain",
-                                maskSize: "contain",
-                            }}
+                            className="pointer-events-none absolute top-1/2 left-1/2 h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/[0.08] mask-[url(/images/isotipo.svg)] mask-contain mask-center mask-no-repeat"
                         />
 
                         <nav className="flex h-dvh w-full flex-col items-center justify-center gap-4 px-10 font-stretch-90% mobile:items-start mobile:px-5">

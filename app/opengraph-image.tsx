@@ -18,8 +18,8 @@ export default function Image() {
                 }}
             >
                 <svg
-                    width={520}
-                    height={279}
+                    width={285}
+                    height={420}
                     viewBox={LOGO_MARK_VIEW_BOX}
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"

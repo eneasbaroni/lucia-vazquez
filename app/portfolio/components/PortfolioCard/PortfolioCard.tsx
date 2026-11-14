@@ -2,7 +2,6 @@
 
 import type { PortfolioItem } from "@/lib/types";
 import { motion, useTransform, type MotionValue } from "motion/react";
-import Link from "next/link";
 import { PortfolioMedia } from "../PortfolioMedia/PortfolioMedia";
 
 type PortfolioCardProps = {
@@ -63,8 +62,7 @@ export function PortfolioCard({
                 style={{ zIndex: index + 1 }}
                 className="sticky top-0 h-dvh w-full bg-linear-to-b from-transparent from-50% to-lv-cream to-50% text-black"
             >
-                <Link
-                    href={`/portfolio/${project.slug}`}
+                <div
                     className="flex h-full w-full flex-col items-start justify-center gap-6 px-10 py-14 pl-[29%]"
                 >
                     <motion.div
@@ -88,7 +86,7 @@ export function PortfolioCard({
                             {project.title}
                         </span>
                     </div>
-                </Link>
+                </div>
             </section>
 
             <div style={{ height: `${HOLD_VH}dvh` }} aria-hidden="true" />

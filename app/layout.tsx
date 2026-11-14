@@ -28,9 +28,9 @@ const lacquer = Lacquer({
     weight: ["400"],
 });
 
-const SITE_NAME = "Lucía Vázquez Leal";
+const SITE_NAME = "Lucía Vázquez";
 const SITE_DESCRIPTION =
-    "Dirección creativa, diseño gráfico, producción audiovisual y producción integral de eventos.";
+    "Diseño gráfico, dirección de arte y producción audiovisual: desarrollo creativo, comunicación visual y gestión integral de proyectos artísticos.";
 // Update if/when a custom domain replaces this Vercel URL.
 const SITE_URL = "https://lucia-vazquez.vercel.app";
 

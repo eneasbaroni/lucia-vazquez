@@ -136,9 +136,9 @@ export function IntroReveal() {
                 style={{
                     opacity: startVisible ? 1 : 0,
                     maskImage:
-                        "linear-gradient(#000, #000), url('/images/logo.svg')",
+                        "linear-gradient(#000, #000), url('/images/isotipo.svg')",
                     WebkitMaskImage:
-                        "linear-gradient(#000, #000), url('/images/logo.svg')",
+                        "linear-gradient(#000, #000), url('/images/isotipo.svg')",
                     maskRepeat: "no-repeat, no-repeat",
                     WebkitMaskRepeat: "no-repeat, no-repeat",
                     maskPosition: "center, center",
@@ -155,8 +155,8 @@ export function IntroReveal() {
                 className="pointer-events-none fixed inset-0 z-20 bg-black"
                 style={{
                     opacity: startVisible ? 1 : 0,
-                    maskImage: "url('/images/logo.svg')",
-                    WebkitMaskImage: "url('/images/logo.svg')",
+                    maskImage: "url('/images/isotipo.svg')",
+                    WebkitMaskImage: "url('/images/isotipo.svg')",
                     maskRepeat: "no-repeat",
                     WebkitMaskRepeat: "no-repeat",
                     maskPosition: "center",

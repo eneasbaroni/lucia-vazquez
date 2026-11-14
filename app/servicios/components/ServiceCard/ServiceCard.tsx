@@ -1,9 +1,10 @@
 "use client";
 
+import { AccentedText } from "@/components";
 import type { Service } from "@/lib/types";
 import { motion, useTransform, type MotionValue } from "motion/react";
-import Image from "next/image";
 import Link from "next/link";
+import { ServiceMediaRotator } from "../ServiceMediaRotator/ServiceMediaRotator";
 
 type ServiceCardProps = {
     service: Service;
@@ -14,21 +15,6 @@ type ServiceCardProps = {
 
 const MIN_SCALE = 0.88;
 const HOLD_VH = 35;
-
-function renderAccented(title: string, accentIndices: number[]) {
-    return title.split("").map((char, i) =>
-        accentIndices.includes(i) ? (
-            <span
-                key={i}
-                className="font-lacquer lowercase text-[1.167em] leading-[0.1]"
-            >
-                {char}
-            </span>
-        ) : (
-            char
-        ),
-    );
-}
 
 export function ServiceCard({
     service,
@@ -61,7 +47,10 @@ export function ServiceCard({
 
                 <div className="flex flex-1 flex-col justify-between py-4 mobile:order-3 mobile:justify-start mobile:gap-2 mobile:py-0">
                     <h2 className="font-archivo ![font-stretch:80%] max-w-xl text-[clamp(1.75rem,3.5vw,3.25rem)] leading-[0.95] tracking-tight uppercase mobile:text-[1.5rem]">
-                        {renderAccented(service.title, service.accentIndices)}
+                        <AccentedText
+                            text={service.title}
+                            accentIndices={service.accentIndices}
+                        />
                     </h2>
 
                     <div className="flex flex-col mobile:mt-4 gap-4 mobile:flex-1">
@@ -117,12 +106,9 @@ export function ServiceCard({
                             className="absolute inset-0"
                             style={{ scale: imageScale }}
                         >
-                            <Image
-                                src={service.images[0]}
+                            <ServiceMediaRotator
+                                media={service.media}
                                 alt={service.title}
-                                fill
-                                sizes="(min-width: 1024px) 40vw, 90vw"
-                                className="object-cover"
                             />
                         </motion.div>
                     </motion.div>

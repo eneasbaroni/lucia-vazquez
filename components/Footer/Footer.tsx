@@ -19,11 +19,7 @@ export function Footer() {
                     <span className="font-lacquer lowercase text-[1.167em] leading-[0.1]">
                         q
                     </span>
-                    uez L
-                    <span className="font-lacquer lowercase text-[1.167em] leading-[0.1]">
-                        e
-                    </span>
-                    al
+                    uez
                 </h2>
             </div>
 
@@ -64,9 +60,14 @@ export function Footer() {
                     </a>
                 </div>
 
-                <div className="flex flex-col gap-1 text-right mobile:order-4 mobile:col-span-2 mobile:text-left">
+                <div className="flex flex-col items-center gap-6 justify-self-end mobile:order-4 mobile:col-span-2 mobile:mt-3 mobile:gap-3 mobile:justify-self-stretch mobile:border-t mobile:border-black/20 mobile:pt-6">
+                    <span
+                        role="img"
+                        aria-label="Logotipo Lucía Vázquez"
+                        className="block h-16 w-[52px] bg-black mobile:h-12 mobile:w-[39px] mask-[url(/images/logotipo.svg)] mask-contain mask-center mask-no-repeat"
+                    />
                     <span className="text-black/60">
-                        © {year} Lucía Vázquez Leal
+                        © {year} Lucía Vázquez
                     </span>
                 </div>
             </div>
